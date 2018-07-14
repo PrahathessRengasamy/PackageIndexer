@@ -1,4 +1,4 @@
-package Solution
+package main
 
 import (
 	"bufio"

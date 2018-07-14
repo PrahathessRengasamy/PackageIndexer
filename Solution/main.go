@@ -1,4 +1,5 @@
-package Solution
+package main
+
 import (
 	"fmt"
 	"log"

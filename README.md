@@ -37,6 +37,33 @@ INDEX|ceylon|\n
 REMOVE|cloog|\n
 QUERY|cloog|\n
 ```
-###Running Docker
+###Running as a Docker container
 
-:
+To build the container use :
+
+```docker build -t PackageIndexer:v1 . ```
+
+To run the server as the container :
+
+   ```docker run -it -p 8080:8080 PackageIndexer:v1```
+   
+Connections and commands are as above.
+
+### Running tests 
+
+In the Solution Directory run :
+
+```go test -v```
+
+to run the tests included and see the results
+
+###Design Diagram
+
+###Design rationale
+The design raitonale was sort of MVC - Model View and Controller.
+The package index was split into the IndexModel which has the data structure map for the package index and some utility functions for the controller
+The IndexController performs the operations through the utility functions provided by the IndexModel and sends result back to client.
+The server is run through main.go itself accepts connections and hands them off to ManageClient (this is sort of the view aspect of MVC). ManageClient then Uses a ClientController to accept client commands
+ClientController then passes them on to the MatchMaker which parses the command and matches them to the appropriate IndexController methods (Client and Index controller talk through the MatchMaker hence the name).
+ 
+   

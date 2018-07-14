@@ -8,7 +8,7 @@ import (
 const (
 	// Connection parameters
 	PORT = "8080"
-	HOST = "localhost"
+	HOST = "0.0.0.0"
 	TYPE = "tcp"
 )
 func main() {

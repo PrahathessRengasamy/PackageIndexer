@@ -1,6 +1,6 @@
 FROM golang:1.8
-COPY PackageIndexer /PackageIndexer
-WORKDIR /PackageIndexer
+COPY ./Solution /Solution
+WORKDIR /Solution
 EXPOSE 8080
 RUN go build
-CMD ["PackageIndexer"]
+CMD ["Solution"]

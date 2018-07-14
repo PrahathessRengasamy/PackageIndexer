@@ -1,4 +1,4 @@
-package PackageIndexer
+package Solution
 import (
 	"fmt"
 	"log"

@@ -47,7 +47,6 @@ func ClientController(conn net.Conn) {
 }
 
 // MatchMaker passes the package along to the necessary response function.
-//
 func MatchMaker(conn net.Conn, resp Response, comm Command, cmd string, pkg Package) {
 	if pkg.Name == "" ||
 		cmd != comm.Index &&

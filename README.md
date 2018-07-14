@@ -1,6 +1,6 @@
 # PackageIndexer
 
-###Running manual:
+### Running manual:
 
 main.go is the server that manages client requests
 
@@ -37,7 +37,7 @@ INDEX|ceylon|\n
 REMOVE|cloog|\n
 QUERY|cloog|\n
 ```
-###Running as a Docker container
+### Running as a Docker container
 
 To build the container use :
 
@@ -57,9 +57,11 @@ In the Solution Directory run :
 
 to run the tests included and see the results
 
-###Design Diagram
+### Design Diagram
+
 ![Design](https://raw.githubusercontent.com/PrahathessRengasamy/PackageIndexer/master/PackageIndex.jpg)
-###Design rationale
+
+### Design rationale
 The design raitonale was sort of MVC - Model View and Controller.
 The package index was split into the IndexModel which has the data structure map for the package index and some utility functions for the controller
 The IndexController performs the operations through the utility functions provided by the IndexModel and sends result back to client.

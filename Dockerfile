@@ -3,4 +3,4 @@ COPY ./Solution /Solution
 WORKDIR /Solution
 EXPOSE 8080
 RUN go build
-CMD ["Solution"]
+CMD ["./Solution"]
